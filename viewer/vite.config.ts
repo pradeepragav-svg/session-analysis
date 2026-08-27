@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import type { IncomingMessage, ServerResponse } from 'http';
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES ? '/session-analysis/' : '/',
   plugins: [react()],
   server: {
     headers: {

@@ -30,3 +30,14 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+## Deployment (GitHub Pages)
+
+Pushes to `main` that touch `viewer/**` are built and published by `.github/workflows/deploy-pages.yml` to `https://pradeepragav-svg.github.io/session-analysis/`. This requires the repo's **Settings → Pages → Source** to be set to "GitHub Actions" (one-time setup).
+
+The hosted page is a static shell only. Loading a real session depends on the `/api` proxy defined in `vite.config.ts`, which forwards the pasted session cookie to `https://whatfix.com/service/analytics` and only exists in the local dev server — it is not available on GitHub Pages. To actually load and replay a session, run it locally instead:
+
+```sh
+npm install
+npm run dev
+```

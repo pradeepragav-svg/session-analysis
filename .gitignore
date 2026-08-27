@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.env
+analysis/.env
+analysis/local_clickhouse/ch-data/
+analysis/venv/
+__pycache__/
+*.pyc
+.playwright-mcp/
+*.har
+.DS_Store
+
+# local data/scratch artifacts
+session-replay-apis.md
+f1cc7808_narrative.tsv
+f1cc7808_narrative_enriched.tsv
+session-viewer.png
+viewer/test.html
